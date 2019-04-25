@@ -10,6 +10,7 @@ in
     protobuf-mode
     rust-mode
     lsp-mode
+    bazel-mode
     company-lsp
     gruvbox-theme
     use-package
