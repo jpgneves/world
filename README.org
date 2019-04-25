@@ -1,0 +1,3 @@
+* World
+My personal "monorepo" containing a custom Emacs with packages I use as well
+as some derivations for things not in nixpkgs yet.
