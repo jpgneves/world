@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/bin
-    ls -lah $src
+
     cp $src p4
     chmod +w p4
     patchelf --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" ./p4
