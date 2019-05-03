@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
 
   unpackPhase = "true";
   dontBuild = true;
-  nativeBuildInputs = [ pkgs.which makeWrapper ];
+  nativeBuildInputs = [ makeWrapper ];
 
   ldLibraryPath = lib.makeLibraryPath [
       stdenv.cc.cc.lib
@@ -37,6 +37,5 @@ stdenv.mkDerivation rec {
     homepage = https://www.perforce.com;
     license = stdenv.lib.licenses.unfreeRedistributable;
     platforms = [ "x86_64-linux" ];
-    maintainers = [ stdenv.lib.maintainers.nioncode ];
   };
 }
