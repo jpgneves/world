@@ -14,6 +14,9 @@ in
     company-lsp
     gruvbox-theme
     use-package
+    tide
+    typescript-mode
+    direnv
     ]) ++ (with epkgs.melpaPackages; [
     lsp-ui
     futhark-mode
