@@ -8,6 +8,7 @@ let
        p4 = callPackage ./pkgs/applications/version-management/p4 {};
        opensnitch = callPackage ./pkgs/applications/networking/opensnitch {};
        bingo = callPackage ./pkgs/development/tools/bingo {};
+       evans = callPackage ./pkgs/development/tools/evans {};
        janet = callPackage ./pkgs/development/interpreters/janet {};
        janetsh = callPackage ./pkgs/shells/janetsh {
                janet = self.janet;
