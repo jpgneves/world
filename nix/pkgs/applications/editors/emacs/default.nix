@@ -15,8 +15,14 @@ in
     gruvbox-theme
     use-package
     tide
+    tuareg
     typescript-mode
+    web-mode
+    yaml-mode
     direnv
+    dante
+    haskell-mode
+    erlang
     ]) ++ (with epkgs.melpaPackages; [
     lsp-ui
     futhark-mode
