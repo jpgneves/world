@@ -7,7 +7,6 @@ in
   emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     nix-mode
     go-mode
-    protobuf-mode
     rust-mode
     lsp-mode
     bazel-mode
@@ -15,6 +14,7 @@ in
     gruvbox-theme
     use-package
     tide
+    toml-mode
     tuareg
     typescript-mode
     web-mode
@@ -23,8 +23,12 @@ in
     dante
     haskell-mode
     erlang
+    yasnippet
+    reason-mode
+    emojify
     ]) ++ (with epkgs.melpaPackages; [
     lsp-ui
     futhark-mode
+    dhall-mode
     ])
   )

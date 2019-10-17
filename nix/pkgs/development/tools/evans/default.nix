@@ -2,17 +2,17 @@
 
 buildGoModule rec {
   name = "evans-${version}";
-  version = "0.7.3";
-  rev = "58f5702b907cddb9ce138781fbc33a468c0b834d";
+  version = "0.8.2";
+  rev = "2a87ba810ec90fa61d947f703595a1e870534f08";
   goPackagePath = "github.com/ktr0731/evans";
 
   src = fetchgit {
     inherit rev;
     url = "https://github.com/ktr0731/evans.git";
-    sha256 = "0x2ylim3358xhvj7mqvy5n441nwwbrb2jfr2vjaxlljl4qdl4hzj";
+    sha256 = "0di83lbjafsy1c58xxpq1y70rnar540n5291mv6xzkhynrrcicby";
   };
 
-  modSha256 = "107njq7sl48mm4c37ps3d9353pm4k07870xg603hzglwi5bcj6p4";
+  modSha256 = "1b5cxh44qsvs5isz4k7vvq2pqb8hrfq98wh7f80hfsnxh3xsxb6k";
 
   subPackages = ["."];
 }
