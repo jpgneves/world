@@ -30,5 +30,6 @@ in
     lsp-ui
     futhark-mode
     dhall-mode
+    powershell
     ])
   )
