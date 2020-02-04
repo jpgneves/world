@@ -2,15 +2,13 @@
 
 stdenv.mkDerivation rec {
   name = "gnat-${version}";
-  version = "community-2019-20190517";
+  version = "community-2019-20190517-18C94";
 
   src = builtins.fetchurl {
-    url = "http://mirrors.cdn.adacore.com/art/5cdffc5409dcd015aaf82626";
-    sha256 = "0whxvrhy5pdfdjfzxiinpka2wn9ra49d73mzz0vmrk1nzw7cfzgn";
+    url = "https://community.download.adacore.com/v1/d40edcdd2d3cc8c64e0f9600ca274bc13d5b49ba?filename=gnat-2019-20190517-18C94-src.tar.gz";
+    sha256 = "1ybcn36gdqmalqdwm57qsij6schp3iw065m6bhd3y9aypdlwppxf";
   };
 
-  unpackPhase = "true";
-  dontBuild = true;
   nativeBuildInputs = [ makeWrapper ];
 
   ldLibraryPath = lib.makeLibraryPath [
