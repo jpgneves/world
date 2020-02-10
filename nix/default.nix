@@ -29,6 +29,7 @@ let
          gnat = self.gnat;
        };
        kustomize = callPackage ./pkgs/applications/networking/cluster/kustomize {};
+       velero = callPackage ./pkgs/applications/networking/cluster/velero {};
   };
 in
   self
