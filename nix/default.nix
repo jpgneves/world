@@ -11,6 +11,7 @@ let
            ];
          };
        };
+       libkqueue = callPackage ./pkgs/development/libkqueue {};
        emacs = callPackage ./pkgs/applications/editors/emacs {};
        p4 = callPackage ./pkgs/applications/version-management/p4 {};
        bingo = callPackage ./pkgs/development/tools/bingo {};
