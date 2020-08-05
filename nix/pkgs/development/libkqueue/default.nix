@@ -5,7 +5,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkgs.cmake ];
 
-  cmakeFlags = [ '-G "Unix Makefiles"' "-DCMAKE_INSTALL_PREFIX=/usr" "-DCMAKE_INSTALL_LIBDIR=lib" ];
+  cmakeFlags = [ "-DCMAKE_INSTALL_LIBDIR=lib" ];
 
   src = fetchgit {
     url = "https://github.com/mheily/libkqueue";
