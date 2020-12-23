@@ -1,18 +1,18 @@
-{ system ? builtins.currentSystem }:
+{ system ? builtins.currentSystem, sources ? import ./sources.nix, pkgs ? import sources.nixpkgs { inherit system; } }:
 
 let
-  pkgs = import <nixpkgs> { inherit system; };
   callPackage = pkgs.lib.callPackageWith (pkgs // self);
   self = {
        weechat = pkgs.weechat.override {
          configure = { availablePlugins, ...}: {
            plugins = with availablePlugins; [
-             (python.withPackages (ps: with ps; [websocket_client]))
+             (python.withPackages (ps: with ps; [websocket_client pkgs.weechatScripts.weechat-matrix]))
            ];
+           scripts = with pkgs.weechatScripts; [ weechat-matrix ];
          };
        };
        libkqueue = callPackage ./pkgs/development/libkqueue {};
-       emacs = callPackage ./pkgs/applications/editors/emacs {};
+       emacs = callPackage ./pkgs/applications/editors/emacs { pkgs = pkgs; };
        p4 = callPackage ./pkgs/applications/version-management/p4 {};
        bingo = callPackage ./pkgs/development/tools/bingo {};
        evans = callPackage ./pkgs/development/tools/evans {};

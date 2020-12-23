@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs }:
 
 let
   myEmacs = pkgs.emacs;
@@ -8,13 +8,10 @@ in
     nix-mode
     go-mode
     rust-mode
-    lsp-mode
-    bazel-mode
     company-lsp
     gruvbox-theme
     use-package
     tide
-    toml-mode
     tuareg
     typescript-mode
     web-mode
@@ -26,10 +23,16 @@ in
     yasnippet
     reason-mode
     emojify
-    ]) ++ (with epkgs.melpaPackages; [
+    utop
+  ]) ++ (with epkgs.melpaPackages; [
+    elixir-mode
+    lsp-mode
     lsp-ui
+    lsp-haskell
     futhark-mode
     dhall-mode
     powershell
+    protobuf-mode
+    merlin
     ])
   )
