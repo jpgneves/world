@@ -8,7 +8,6 @@ in
     nix-mode
     go-mode
     rust-mode
-    company-lsp
     gruvbox-theme
     use-package
     tide
@@ -34,5 +33,8 @@ in
     powershell
     protobuf-mode
     merlin
-    ])
-  )
+    slime
+  ]) ++ (with epkgs.elpaPackages; [
+    ada-mode
+  ])
+)
